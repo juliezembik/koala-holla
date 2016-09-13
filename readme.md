@@ -19,3 +19,7 @@ Client needs
 Koala Holla has provided a cvs (comma separated values) spreadsheet of their current inventory. They want a database that houses this information, is able to be viewed at any time, and has the abilities to update data.
 
 They have also provided their logo and the source code from when Lou (a KH employee) tried to spin up a JEN stack project to support this, but had to leave for foraging school in Finland finally finish.
+
+Delivery
+--------
+Upon completion of the project you'll need to provide not only the course (via github url), but also instructions on how the database and its table(s) should be set up. This can be in a simple databaseSetup.txt file in the repo.
