@@ -19,33 +19,33 @@ app.get( '/', function( req, res ){
 });
 
 // get koalas
-app.get( '/getKoalas', function( req, res ){
-  console.log( 'getKoalas route hit' );
+app.get( '/koalas', function( req, res ){
+  console.log( 'GET koalas route hit' );
   //assemble object to send
   var objectToSend={
-    response: 'from getKoalas route'
+    response: 'from GET koalas route'
   }; //end objectToSend
   //send info back to client
   res.send( objectToSend );
 });
 
 // add koala
-app.post( '/addKoala', urlencodedParser, function( req, res ){
-  console.log( 'addKoala route hit' );
+app.post( '/koalas', urlencodedParser, function( req, res ){
+  console.log( 'POST koalas route hit' );
   //assemble object to send
   var objectToSend={
-    response: 'from addKoala route'
+    response: 'from POST koalas route'
   }; //end objectToSend
   //send info back to client
   res.send( objectToSend );
 });
 
 // add koala
-app.post( '/editKoala', urlencodedParser, function( req, res ){
-  console.log( 'editKoala route hit' );
+app.put( '/koalas', urlencodedParser, function( req, res ){
+  console.log( 'PUT koalas route hit' );
   //assemble object to send
   var objectToSend={
-    response: 'from editKoala route'
+    response: 'from PUT koalas route'
   }; //end objectToSend
   //send info back to client
   res.send( objectToSend );

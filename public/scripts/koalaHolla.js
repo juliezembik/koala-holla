@@ -27,7 +27,7 @@ var getKoalas = function(){
   console.log( 'in getKoalas' );
   // ajax call to server to get koalas
   $.ajax({
-    url: '/getKoalas',
+    url: '/koalas',
     type: 'GET',
     success: function( data ){
       console.log( 'got some koalas: ', data );
@@ -40,8 +40,8 @@ var saveKoala = function( newKoala ){
   console.log( 'in saveKoala', newKoala );
   // ajax call to server to get koalas
   $.ajax({
-    url: '/addKoala',
-    type: 'post',
+    url: '/koalas',
+    type: 'POST',
     data: newKoala,
     success: function( data ){
       console.log( 'got some koalas: ', data );
