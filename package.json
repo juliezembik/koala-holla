@@ -1,21 +1,14 @@
 {
   "name": "koalla_holla",
   "version": "1.0.0",
-  "description": "This must stop: --------------- [![Nevar again](http://img.youtube.com/vi/tOHtuPFUYU/0.jpg)](http://www.youtube.com/watch?v=tOHtuPFUYU)",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/devjanaprime/koalaHolla.git"
+    "start": "node server/server.js"
   },
   "author": "@devjana",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/devjanaprime/koalaHolla/issues"
-  },
-  "homepage": "https://github.com/devjanaprime/koalaHolla#readme",
   "dependencies": {
     "body-parser": "^1.15.2",
     "express": "^4.14.0"

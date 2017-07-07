@@ -14,7 +14,7 @@ $( document ).ready( function(){
     var objectToSend = {
       name: 'testName',
       age: 'testName',
-      sex: 'testName',
+      gender: 'testName',
       readyForTransfer: 'testName',
       notes: 'testName',
     };
@@ -23,7 +23,7 @@ $( document ).ready( function(){
   }); //end addButton on click
 }); // end doc ready
 
-var getKoalas = function(){
+function getKoalas(){
   console.log( 'in getKoalas' );
   // ajax call to server to get koalas
   $.ajax({
@@ -36,7 +36,7 @@ var getKoalas = function(){
   // display on DOM with buttons that allow edit of each
 } // end getKoalas
 
-var saveKoala = function( newKoala ){
+function saveKoala( newKoala ){
   console.log( 'in saveKoala', newKoala );
   // ajax call to server to get koalas
   $.ajax({

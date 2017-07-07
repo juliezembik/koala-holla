@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <title>Koalla Holla</title>
     <script src="vendors/jquery-3.0.0.min.js" charset="utf-8"></script>
-    <script src="scripts/koalaHolla.js" charset="utf-8"></script>
+    <script src="scripts/client.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="views/styles.css">
   </head>
   <body>
     <img src="images/icon.png" />
@@ -15,22 +16,26 @@
       <h2>Add Koala</h2>
       <input type="text" id="nameIn" value="" placeholder="Name">
       <input type="text" id="ageIn" value="" placeholder="Age">
-      <input type="text" id="sexIn" value="" placeholder="Sex">
+      <input type="text" id="genderIn" value="" placeholder="Gender">
       <input type="text" id="readyForTransferIn" value="" placeholder="Transfer">
       <input type="text" id="notesIn" value="" placeholder="Notes">
       <button type="button" id="addButton">Add Koala</button>
     </div>
-    <div id="editKoala">
-      <h2>Edit Koala</h2>
-      <input type="text" id="nameEditIn" value="" placeholder="Name">
-      <input type="text" id="ageEditIn" value="" placeholder="Age">
-      <input type="text" id="sexEditIn" value="" placeholder="Sex">
-      <input type="text" id="readyForTransferEditIn" value="" placeholder="Transfer">
-      <input type="text" id="notesEditIn" value="" placeholder="Notes">
-      <button type="button" id="editButton">Edit Koala</button>
-    </div>
-    <div id="viewKoalas">
+    <div>
       <h2>All Koalas</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Ready for Transfer</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody id="viewKoalas">
+        </tbody>
+      </table>
     </div>
   </body>
 </html>
