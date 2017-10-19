@@ -17,7 +17,7 @@ Technologies
 
 Client needs
 ------------
-Koala Holla has provided a TSV (tab separated values) spreadsheet of their current inventory. They want a database table that houses this information and can be viewed at any time. You should add this table to your existing **antares** database. After importing the data, create a web app to display the Koalas. Users should be able to add new Koalas to the database through the provided HTML form.
+Koala Holla has provided a TSV (tab separated values) spreadsheet of their current inventory. They want a database table that houses this information and can be viewed at any time. You should add this table to your existing **deneb** database. After importing the data, create a web app to display the Koalas. Users should be able to add new Koalas to the database through the provided HTML form.
 
 They have also provided their logo and the source code from when Lou (a KH employee) tried to spin up a JEN stack project to support this, but had to leave for foraging school in Finland before he could finally finish. (JEN is short for jQuery, Express & Node).
 
