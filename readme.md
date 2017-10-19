@@ -27,12 +27,13 @@ Hard Mode
 
 2. Ability to delete Koalas from the database.
 
-3. Add some styling.
+3. Add some styling with bootstrap.
 
 Pro Mode
 ---
 1. Ability to edit information for existing Koalas in the db.
-2. Add form validation, additional styling and a README.md.
+2. Ability to toggle the display of Koalas ready for transfer.
+3. Add form validation, additional styling and a README.md.
 
 Delivery
 --------
