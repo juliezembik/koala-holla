@@ -17,7 +17,18 @@ Technologies
 
 Client needs
 ------------
-Koala Holla has provided a TSV (tab separated values) spreadsheet of their current inventory. They want a database table that houses this information and can be viewed at any time. You should add this table to your existing **deneb** database. After importing the data, create a web app to display the Koalas. Users should be able to add new Koalas to the database through the provided HTML form.
+Koala Holla has provided a table of their current inventory:
+
+| id | name    | gender | age | ready_to_transer | notes                            |
+|----|---------|--------|-----|------------------|----------------------------------|
+| 1  | Scotty  | M      | 4   | Y                | Born in Guatemala                |
+| 2  | Jean    | F      | 5   | Y                | Allergic to lots of lava         |
+| 3  | Ororo   | F      | 7   | N                | Loves listening to Paula (Abdul) |
+| 4  | Logan   | M      | 15  | N                | Loves the sauna                  |
+| 5  | Charlie | M      | 9   | Y                | Favorite band is Nirvana         |
+| 6  | Betsy   | F      | 4   | Y                | Has a pet iguana                 |
+
+They want a database table that houses this information and can be viewed at any time. You should create a `koala_holla` database and add the data from the table above to a `koala` table. After adding the data, create a web app to display the Koalas. Users should be able to add new Koalas to the database through the provided HTML form.
 
 They have also provided their logo and the source code from when Lou (a KH employee) tried to spin up a JEN stack project to support this, but had to leave for foraging school in Finland before he could finally finish. (JEN is short for jQuery, Express & Node).
 
@@ -37,7 +48,7 @@ Pro Mode
 
 Delivery
 --------
-Upon completion of the project you'll need to provide not only the source (via GitHub url), but also instructions on how the database table should be set up. This can be in a simple databaseSetup.sql file in the repo.
+Upon completion of the project you'll need to provide not only the source (via GitHub url), but also instructions on how the database table should be set up. This can be in a simple `database.sql` file in the repo.
 
 Sample Output
 --------
