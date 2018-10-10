@@ -28,29 +28,26 @@ Koala Holla has provided a table of their current inventory:
 | 5  | Charlie | M      | 9   | Y                | Favorite band is Nirvana         |
 | 6  | Betsy   | F      | 4   | Y                | Has a pet iguana                 |
 
-They want a database table that houses this information and can be viewed at any time. You should create a `koala_holla` database and add the data from the table above to a `koala` table. After adding the data, create a web app to display the Koalas. Users should be able to add new Koalas to the database through the provided HTML form.
+They need the ability to add a Koala to the database. Make a form with the appropriate info. Save the koala in the database. Think about what data types you'll be needing for your table columns.  
 
-They have also provided their logo and the source code from when Lou (a KH employee) tried to spin up a JEN stack project to support this, but had to leave for foraging school in Finland before he could finally finish. (JEN is short for jQuery, Express & Node).
-
-Hard Mode
----
-1. Ability for mark Koala ready for transfer. Add a button to each row that reads 'Ready for Transfer'. When the user clicks on the button, it should update the database for the specific Koala. The 'Ready for Transfer' button should only appear for Koalas that haven't yet been marked ready for transfer.
-
-2. Ability to delete Koalas from the database.
-
-3. Add some styling with bootstrap.
-
-Pro Mode
----
-1. Ability to edit information for existing Koalas in the db.
-2. Ability to toggle the display of Koalas ready for transfer.
-3. Add form validation, additional styling and a README.md.
+They need the ability for mark a Koala ready for transfer. Each koala in your UI needs a button in that reads 'Ready for Transfer'. When the user clicks on the button, it should update the database for the specific Koala. The 'Ready for Transfer' button should only appear for Koalas that haven't yet been marked ready for transfer.
 
 Delivery
 --------
 Upon completion of the project you'll need to provide not only the source (via GitHub url), but also instructions on how the database table should be set up. This can be in a simple `database.sql` file in the repo.
 
-Sample Output
+### STRETCH GOALS
+
+1. Ability to delete a specific Koala from the database.  
+2. Confirmation dialog before deleting (research SweetAlert).
+3. Ability to toggle the display of Koalas ready for transfer.
+4. Add form validation, additional styling and a README.md.
+5. Client side filtering with a text box
+6. Ability to edit other information (Name, Age, Notes) for existing Koalas in the db.
+
+
+
+### Sample Wireframe
 --------
 Your final product may look something like this:
 
