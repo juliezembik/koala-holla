@@ -34,6 +34,7 @@ function saveKoala(){
            data: koalasToServer
         }).then((result) =>{
           console.log(result);
+          getKoalas();
         }).catch((errorMessage) => {
           // alert telling the user no record was created
           alert(`There was a problem with adding your koala`);
