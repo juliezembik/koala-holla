@@ -15,6 +15,8 @@ function setupClickListeners() {
 
 function getKoalas(){
   console.log( 'in getKoalas' );
+  // clear the DOM
+  $('#viewKoalas').empty();
   // ajax call to server to get koalas
   $.ajax({
     method: 'GET',
