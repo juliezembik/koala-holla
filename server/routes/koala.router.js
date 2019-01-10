@@ -9,7 +9,7 @@ const pool = new Pool ({
     host: 'localhost',
     port: 5432,
     max: 10,
-    idleTimeoutMillis: 10000
+    idleTimeMillis: 10000
 });
 
 // GET
@@ -28,8 +28,17 @@ koalaRouter.get('/', (req, res) => {
 
 // POST
 koalaRouter.post('/', (req, res) => {
-    console.log(req.body);
-    res.sendStatus(200);
+    console.log('in /koalas POST', req.body);
+    const koalaToAdd = req.body;
+    const queryText = `INSERT INTO "inventory"("name", "gender", "age", "ready_to_transfer", "notes")
+                       VALUES($1, $2, $3, $4, $5);`;
+    pool.query(queryText, [koalaToAdd.name, koalaToAdd.gender, koalaToAdd.age, koalaToAdd.ready_to_transfer, koalaToAdd.notes])
+    .then((response) => {
+        res.sendStatus(200);
+    }).catch((error) => {
+        console.log(`ERROR in POST /koalas, ${error}`);
+        res.sendStatus(500);
+    })
 })
 
 // PUT
