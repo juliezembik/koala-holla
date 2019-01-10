@@ -56,7 +56,7 @@ koalaRouter.put('/:id', (req, res) => {
 
 // DELETE
 koalaRouter.delete('/:id', (req, res) => {
-    console.log('PARAMS', req,params);
+    console.log('PARAMS', req.params);
     const queryText = `DELETE FROM "inventory" WHERE "id" = $1;`    
     pool.query(queryText, [req.params.id]).then((result) => {
         res.sendStatus(200);
