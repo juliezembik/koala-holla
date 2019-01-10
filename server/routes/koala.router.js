@@ -9,7 +9,7 @@ const pool = new Pool ({
     host: 'localhost',
     port: 5432,
     max: 10,
-    idleTimeoutMillis: 10000
+    idleTimeMillis: 10000
 });
 
 // GET
