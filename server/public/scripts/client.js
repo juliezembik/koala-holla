@@ -21,14 +21,21 @@ function getKoalas(){
     url: '/koala'
   }).then(function(response){
     console.log('in GET response', response);
-    
-
+    listOfKoala = response;
+    for(koala of listOfKoala){
+     // append each koala to the DOM
+      $('#viewKoalas').append(`<tr>
+                                    <td>${koala.name}</td>
+                                    <td>${koala.gender}</td>
+                                    <td>${koala.age}</td>
+                                    <td>${koala.ready_to_transfer}</td>
+                                    <td>${koala.notes}</td>
+      </tr>`)
+    }
   }).catch(function(error){
     alert('Something went wrong, GET method not working on client side');
     console.log('Error in koala GET', error);
-    
   })// end ajax
-  
 } // end getKoalas
 
 function saveKoala(){
