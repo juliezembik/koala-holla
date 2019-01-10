@@ -12,7 +12,6 @@ const pool = new Pool ({
     idleTimeMillis: 10000
 });
 
-
 // GET
 router.get('/', (req, res) => {
     let queryText = `SELECT * FROM "inventory";`;
@@ -28,7 +27,10 @@ router.get('/', (req, res) => {
 });
 
 // POST
-//router.post('')
+koalaRouter.post('/', (req, res) => {
+    console.log(req.body);
+    res.sendStatus(200);
+})
 
 // PUT
 
