@@ -39,11 +39,22 @@ koalaRouter.post('/', (req, res) => {
         console.log(`ERROR in POST /koalas, ${error}`);
         res.sendStatus(500);
     })
-})
+});
 
 // PUT
 
 
 // DELETE
+koalaRouter.delete('/:id', (req, res) => {
+    console.log('PARAMS', req,params);
+    const queryText = `DELETE FROM "inventory" WHERE "id" = $1;`    
+    pool.query(queryText, [req.params.id]).then((result) => {
+        res.sendStatus(200);
+    }).catch((error) => {
+        console.log(`ERROR in DELETE /koalas ${error}`);
+        res.sendStatus(500);        
+    })
+});
+
 
 module.exports = koalaRouter;
