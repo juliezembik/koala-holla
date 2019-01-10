@@ -9,12 +9,12 @@ const pool = new Pool ({
     host: 'localhost',
     port: 5432,
     max: 10,
-    idleTimeMillis: 10000
+    idleTimeoutMillis: 10000
 });
 
 
 // GET
-router.get('/', (req, res) => {
+koalaRouter.get('/', (req, res) => {
     let queryText = `SELECT * FROM "inventory";`;
     pool.query(queryText).then((result) => {
         console.log(result);

@@ -18,7 +18,7 @@ function getKoalas(){
   // ajax call to server to get koalas
   $.ajax({
     method: 'GET',
-    url: '/koala'
+    url: '/koalas'
   }).then(function(response){
     console.log('in GET response', response);
     listOfKoala = response;
