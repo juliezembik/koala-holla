@@ -15,17 +15,9 @@ const pool = new Pool ({
 
 
 // GET
-router.get('/', (req, res) => {
-    const queryText = `SELECT * FROM "inventory";`;
-    pool.query(queryText),then((result) => {
-        console.log(result);
-        res.send(result.rows);
-    })
-
-})
 
 // POST
-router.post('')
+//router.post('')
 
 // PUT
 
