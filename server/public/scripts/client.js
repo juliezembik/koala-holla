@@ -26,7 +26,14 @@ function getKoalas(){
   }).then(function(response){
     console.log('in GET response', response);
     let listOfKoala = response;
-    for(koala of listOfKoala){
+    let transferButton;
+    for(let koala of listOfKoala){
+      console.log(`Transfer: ${koala.ready_to_transfer}`);
+      if ( koala.ready_to_transfer == 'N') {
+        transferButton = `<button type="button" class="transfer" data-koalaready=${koala.id}>Ready to transfer</button>`;
+      } else {
+        transferButton = ``;
+      } // end if 
      // append each koala to the DOM
       $('#viewKoalas').append(`<tr>
                                     <td>${koala.name}</td>
@@ -34,7 +41,7 @@ function getKoalas(){
                                     <td>${koala.gender}</td>
                                     <td>${koala.ready_to_transfer}</td>
                                     <td>${koala.notes}</td>
-                                    <td><button type="button" class="transfer" data-koalaready=${koala.id}>Ready to transfer</button></td>
+                                    <td>${transferButton}</td>
                                     <td><button type="button" class="delete" data-koaladelete=${koala.id}>Delete</button></td>
       </tr>`)
     }
