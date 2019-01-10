@@ -12,6 +12,8 @@ $( document ).ready( function(){
 function setupClickListeners() {
   $( '#addButton' ).on( 'click', saveKoala);
   $( '#viewKoalas').on( 'click', '.transfer', transferKoala);
+  $( '#viewKoalas').on( 'click', '.delete', deleteKoala);
+
 }
 
 function getKoalas(){
@@ -82,3 +84,19 @@ function transferKoala() {
     console.log(`Error message in PUT: ${errorMessage}`);
   })
 } // end transferKoala
+
+function deleteKoala(){
+  console.log('in delete button');
+  let koalaData = $(this).data('koaladelete');
+  console.log(koalaData);
+  $.ajax({
+    method: 'DELETE',
+    url:`/koalas/${koalaData}`
+  }).then(function(result){
+    console.log('in result', result);
+    getKoalas();
+  }).catch(function(error){
+    alert(`Koala delete button not working`)
+    console.log(`error message in DELETE ${error}`);
+  })
+} // end deleteKoala
