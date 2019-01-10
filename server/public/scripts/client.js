@@ -44,8 +44,8 @@ function saveKoala(){
   // variable holding the koala data from input fields
   let koalasToServer = { name: $('#nameIn').val(),
                          age: $('#ageIn').val(),
-                         gender: $('genderIn').val(),
-                         transfer: $('readyForTransferIn').val(),
+                         gender: $('#genderIn').val(),
+                         ready_to_transfer: $('#readyForTransferIn').val(),
                          notes: $('#notesIn').val()
                        }
   $.ajax({ method: 'POST',
