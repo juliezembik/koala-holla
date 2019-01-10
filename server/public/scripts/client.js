@@ -23,7 +23,7 @@ function getKoalas(){
 function saveKoala(){
   // ajax call to server to get koalas
   // variable holding the koala data from input fields
-  let koallaToServer = { name: $('#nameIn').val(),
+  let koalasToServer = { name: $('#nameIn').val(),
                          age: $('#ageIn').val(),
                          gender: $('genderIn').val(),
                          transfer: $('readyForTransferIn').val(),
@@ -31,7 +31,7 @@ function saveKoala(){
                        }
   $.ajax({ method: 'POST',
            url: '/koala',
-           data: koallaToServer
+           data: koalasToServer
         }).then((result) =>{
           console.log(result);
         }).catch((errorMessage) => {
