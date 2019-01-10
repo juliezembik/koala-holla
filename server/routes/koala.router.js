@@ -13,7 +13,7 @@ const pool = new Pool ({
 });
 
 // GET
-router.get('/', (req, res) => {
+koalaRouter.get('/', (req, res) => {
     let queryText = `SELECT * FROM "inventory";`;
     pool.query(queryText).then((result) => {
         console.log(result);
@@ -27,7 +27,7 @@ router.get('/', (req, res) => {
 });
 
 // POST
-router.post('/', (req, res) => {
+koalaRouter.post('/', (req, res) => {
     console.log(req.body);
     res.sendStatus(200);
 })
