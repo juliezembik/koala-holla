@@ -2,10 +2,6 @@ const express = require('express');
 const koalaRouter = express.Router();
 const pg = require('pg');
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 4fe8427283f05198efbea6d72f85bbafa11fffe5
 // DB CONNECTION
 const Pool = pg.Pool;
 const pool = new Pool ({
@@ -18,9 +14,8 @@ const pool = new Pool ({
 
 
 // GET
-<<<<<<< HEAD
 router.get('/', (req, res) => {
-    let queryText = `SELECT * FROM "koalas";`;
+    let queryText = `SELECT * FROM "inventory";`;
     pool.query(queryText).then((result) => {
         console.log(result);
         res.send(result.rows);
@@ -31,8 +26,6 @@ router.get('/', (req, res) => {
     console.log('In koalas GET');
     
 });
-=======
->>>>>>> 4fe8427283f05198efbea6d72f85bbafa11fffe5
 
 // POST
 //router.post('')
