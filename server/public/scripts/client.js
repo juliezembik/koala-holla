@@ -16,7 +16,6 @@ function setupClickListeners() {
 
 function getKoalas(){
   console.log( 'in getKoalas' );
-  // clear the DOM
   $('#viewKoalas').empty();
   // ajax call to server to get koalas
   $.ajax({
@@ -29,8 +28,8 @@ function getKoalas(){
      // append each koala to the DOM
       $('#viewKoalas').append(`<tr>
                                     <td>${koala.name}</td>
-                                    <td>${koala.gender}</td>
                                     <td>${koala.age}</td>
+                                    <td>${koala.gender}</td>
                                     <td>${koala.ready_to_transfer}</td>
                                     <td>${koala.notes}</td>
                                     <td><button type="button" class="transfer" data-koalaready=${koala.id}>Ready to transfer</button></td>
