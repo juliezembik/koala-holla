@@ -49,7 +49,7 @@ function saveKoala(){
                          notes: $('#notesIn').val()
                        }
   $.ajax({ method: 'POST',
-           url: '/koala',
+           url: '/koalas',
            data: koalasToServer
         }).then((result) =>{
           console.log(result);
